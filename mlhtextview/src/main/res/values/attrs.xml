@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaxLinesHalfTextView">
+        <attr name="max_lines_half_tv_line" format="integer" />
+    </declare-styleable>
+</resources>
