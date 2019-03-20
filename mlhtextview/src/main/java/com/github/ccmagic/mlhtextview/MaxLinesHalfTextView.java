@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
-import android.util.Log;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
@@ -35,11 +34,9 @@ public class MaxLinesHalfTextView extends AppCompatTextView {
         ta.recycle();
     }
 
-
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        //
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
         if (getLineCount() > maxLine) {
             CharSequence content = getText();
             if (content != null) {
@@ -55,10 +52,5 @@ public class MaxLinesHalfTextView extends AppCompatTextView {
         }
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
 
-
-    }
 }
